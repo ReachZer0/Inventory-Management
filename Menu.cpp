@@ -1,0 +1,79 @@
+#pragma once
+#include <iostream>
+#include <fstream>
+#include "User.cpp"
+#include "InventoryManagement.cpp"
+#include "UserManagement.cpp"
+using namespace std;
+
+class UserMenu {
+private:
+public:
+
+	void showAdminMenu() {
+		int selectchoice = 0;
+		bool breakout = false;
+		do {
+			system("cls");
+			cout << "\t\t\t\t\t==========--ADMIN MENU--==========" << endl;
+			cout << "\t\t\t\t\t1. User Management" << endl;
+			cout << "\t\t\t\t\t2. Inventory Mangement" << endl;
+			cout << "\t\t\t\t\t3. Exit" << endl;
+			cout << "\t\t\t\t\tPlease select your option (1-3): ";
+			cin >> selectchoice;
+
+			switch (selectchoice) {
+			case 1: {
+				system("cls");
+				cout << "\t\t\t\t\t==========--USER MANAGEMENT MENU--==========" << endl;
+				UserManagement userManagement;
+				userManagement.displayMenu();
+
+				break;
+			}
+			case 2: {
+				system("cls");
+				cout << "\t\t\t\t\t==========--INVENTORY MANAGEMENT MENU--==========" << endl;
+				InventoryManagement inventoryManagement;
+				inventoryManagement.displayMenu();
+				break;
+			}
+			case 3: {
+				breakout = true;
+				break;
+			}
+
+			}
+
+		} while (breakout == false);
+
+
+	}
+
+	void showUserMenu() {
+		int selectchoice = 0;
+		bool breakout = false;
+		do {
+			system("cls");
+			cout << "\t\t\t\t\t==========--INVENTORY MANAGEMENT MENU--==========" << endl;
+			cout << "1. Inventory Mangement" << endl;
+			cout << "2. Exit" << endl;
+			cout << "Please select your option (1-2): ";
+			cin >> selectchoice;
+
+			switch (selectchoice) {
+				case 1: {
+					system("cls");
+					cout << "\t\t\t\t\t==========--INVENTORY MENU--==========" << endl;
+					break;
+				}
+				case 2: {
+					system("cls");
+					breakout = true;
+					break;
+				}
+			}
+
+		} while (breakout == false);
+	}
+};
