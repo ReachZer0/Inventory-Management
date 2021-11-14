@@ -21,13 +21,13 @@
     <ClCompile Include="Menu.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="InventoryManagement.cpp">
+    <ClCompile Include="InventoryService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="UserManagement.cpp">
+    <ClCompile Include="UserService.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Items.cpp">
@@ -37,6 +37,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="UserAuthentication.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileUtil.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="FileNotFoundException.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -5,8 +5,6 @@ using namespace std;
 
 class Items {
 private:
-	/*string name;
-	string brand;*/
 	char name[20];
 	char brand[20];
 	float quantity;
@@ -43,7 +41,7 @@ public:
 		this->quantity = quantity;
 	}
 
-	double getPrice() const {
+	double getPrice() const {	
 		return price;
 	}
 	void setPrice(double price) {
@@ -51,7 +49,6 @@ public:
 	}
 
 	void getItem() {
-		cout << "\t\t\t\t\t\t==========---Item Detail---==========" << endl;
 		cout << "\t\t\t\t\t\tEnter Item Name: ";
 		cin >> name;
 		cout << "\t\t\t\t\t\tEnter Manufactor/Brand name: ";

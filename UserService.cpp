@@ -4,12 +4,14 @@
 #include <vector>
 #include<stdio.h>
 #include "User.cpp"
+#include "FileUtil.cpp"
 using namespace std;
 const char USER[] = "Users.dat";
-class UserManagement {
+class UserService {
 private:
 	User user;
 	string username;
+	FileUtil fileUtil;
 public:
 	bool breakout = false;
 	int choice = 0;
@@ -41,6 +43,7 @@ public:
 				viewUser();
 				cout << "Enter username to update: ";
 				cin >> username;
+				system("cls");
 				updateUser(username);
 				break;
 			}
@@ -106,7 +109,7 @@ public:
 		fio.close();
 	}
 
-	void deleteUser(string name) {
+	void deleteUser(string username) {
 		
 		ifstream fin;
 		ofstream fout;
@@ -116,17 +119,19 @@ public:
 			cerr << "FILE IS FAIL TO OPEN";
 			exit(1);
 		}
-
 		fout.open("temp.dat", ios::out | ios::app | ios::binary);
 		fin.seekg(0, ios::beg);
 		while (fin.read((char*)&user, sizeof(User))) {
-			if (user.getUsername() != name) {
+			if (user.getUsername() != username) {
 				fout.write((char*)&user, sizeof(User));
 			}
 		}
 		fin.close();
 		fout.close();
-		remove("Users.dat");
+		if (remove("user.dat") != 0)
+		{
+			cout << "Failed to remove!" << endl;
+		}
 		rename("temp.dat", "Users.dat");
 		cout << "User has been delete" << endl;
 	}

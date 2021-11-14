@@ -1,8 +1,8 @@
 #pragma once
 #include <iostream>
 #include "User.cpp"
-#include "UserManagement.cpp"
-#include "InventoryManagement.cpp"
+#include "UserService.cpp"
+#include "InventoryService.cpp"
 #include "UserAuthentication.cpp"
 using namespace std;
 
@@ -13,14 +13,13 @@ private:
         cout << "\t\t\t\t\t==========--MANAGEMENT SYSTEM--==========" << endl;
         cout << "\t\t\t\t\t~1. Login" << endl;
         cout << "\t\t\t\t\t~2. Create New User" << endl;
-        cout << "\t\t\t\t\t~3. View User" << endl;
-        cout << "\t\t\t\t\t~4. Exit" << endl;
-        cout << "\t\t\t\t\t~Please select your option (1-4):";
+        cout << "\t\t\t\t\t~3. Exit" << endl;
+        cout << "\t\t\t\t\t~Please select your option (1-3):";
         cin >> choice;
     }
 
     char username[20], password[20], role[10];
-    UserManagement userManagement;
+    UserService userService;
     UserAuth userAuth;
     User user;
 public:
@@ -44,15 +43,11 @@ public:
                 system("cls");
                 cout << "\t\t\t\t\t\t==========---Create New User---==========\n";
                 user.getUser(2);
-                userManagement.addUser(user);
+                userService.addUser(user);
                 break;
-            case 3:
-                system("cls");
-                userManagement.viewUser();
-                system("pause");
-                break;
+
             }
-        } while (choice != 4);
+        } while (choice != 3);
 
 	}
 

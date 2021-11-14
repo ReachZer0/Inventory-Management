@@ -2,8 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include "User.cpp"
-#include "InventoryManagement.cpp"
-#include "UserManagement.cpp"
+#include "InventoryService.cpp"
+#include "UserService.cpp"
 using namespace std;
 
 class UserMenu {
@@ -26,16 +26,17 @@ public:
 			case 1: {
 				system("cls");
 				cout << "\t\t\t\t\t==========--USER MANAGEMENT MENU--==========" << endl;
-				UserManagement userManagement;
-				userManagement.displayMenu();
+				UserService userService;
+				userService.displayMenu();
 
 				break;
 			}
 			case 2: {
 				system("cls");
 				cout << "\t\t\t\t\t==========--INVENTORY MANAGEMENT MENU--==========" << endl;
-				InventoryManagement inventoryManagement;
-				inventoryManagement.displayMenu();
+				InventoryService inventoryService;
+				inventoryService.displayMenu();
+
 				break;
 			}
 			case 3: {

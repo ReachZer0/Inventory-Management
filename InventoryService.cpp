@@ -2,11 +2,10 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <stdio.h>
 #include "Items.cpp"
 using namespace std;
 const char ITEMS[] = "Items.dat";
-class InventoryManagement {
+class InventoryService {
 private:
 	Items items;
 	int choice = 0;
@@ -29,7 +28,6 @@ public:
 			system("cls");
 			items.getItem();
 			addItems(items);
-			system("pause");
 			break;
 		case 2:
 			system("cls");
@@ -122,8 +120,11 @@ public:
 		}
 		fin.close();
 		fout.close();
-		remove("Users.dat");
-		rename("temp.dat", "Users.dat");
+		if (remove("Items.dat") != 0)
+		{
+			cout << "Failed to remove!" << endl;
+		}
+		rename("temp.dat", "Items.dat");
 		cout << "Item has been delete" << endl;
 	}
 };

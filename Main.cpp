@@ -1,7 +1,7 @@
 #include <iostream>
 #include "User.cpp"
-#include "UserManagement.cpp"
-#include "InventoryManagement.cpp"
+#include "UserService.cpp"
+#include "InventoryService.cpp"
 #include "App.cpp"
 using namespace std;
 

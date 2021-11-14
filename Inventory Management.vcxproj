@@ -140,13 +140,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
+    <ClCompile Include="FileNotFoundException.cpp" />
+    <ClCompile Include="FileUtil.cpp" />
     <ClCompile Include="Items.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="InventoryManagement.cpp" />
+    <ClCompile Include="InventoryService.cpp" />
     <ClCompile Include="User.cpp" />
     <ClCompile Include="UserAuthentication.cpp" />
     <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="UserManagement.cpp" />
+    <ClCompile Include="UserService.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

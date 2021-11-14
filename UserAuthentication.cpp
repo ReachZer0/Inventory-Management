@@ -1,13 +1,13 @@
 #include <iostream>
 #include <fstream>
 #include "User.cpp"
-#include "UserManagement.cpp"
+#include "UserService.cpp"
 #include "Menu.cpp"
 using namespace std;
 
 class UserAuth {
 private:
-	UserManagement userManagement;
+	UserService userService;
 	User user;
 	UserMenu usermenu;
 public:
