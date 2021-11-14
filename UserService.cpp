@@ -2,7 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
-#include<stdio.h>
+#include <stdio.h>
 #include "User.cpp"
 #include "FileUtil.cpp"
 using namespace std;
@@ -53,6 +53,7 @@ public:
 				viewUser();
 				cout << "Enter username to delete: ";
 				cin >> username;
+				system("cls");
 				deleteUser(username);
 				system("pause");
 				break;
@@ -67,14 +68,9 @@ public:
 	}
 
 	void addUser(User& user) {
-		ofstream fout;
-		fout.open(USER, ios::out | ios::app | ios::binary);
-		if (!fout) {
-			cerr << "FILE IS FAIL TO OPEN";
-			exit(1);
-		}
-		fout.write((char*)&user, sizeof(User));
-		fout.close();
+		fileUtil.OpenDataToFile(USER);
+		fileUtil.writeUserDataToFile(user);
+		fileUtil.closeUserOutputFile();
 	}
 
 	void viewUser() {
@@ -88,7 +84,7 @@ public:
 			user.displayUser();
 		}
 		fin.close();
-	} 
+	}
 
 	void updateUser(string username) {
 		fstream fio;
@@ -135,7 +131,7 @@ public:
 			cout << "Failed to remove!" << endl;
 		}
 		rename("temp.dat", "Users.dat");
-		cout << "User has been delete." << endl;
+		cout << "\t\t\t\t\t\tUser has been delete." << endl;
 	}
 
 };

@@ -1,13 +1,27 @@
+#pragma once
 #include <iostream>
 #include <fstream>
 #include "FileNotFoundException.cpp"
 #include "User.cpp"
+#include "Items.cpp"
 using namespace std;
 class FileUtil {
 private:
 	ofstream fout;
+	ifstream fin;
 	User user;
+	Items items;
 public:
+
+	void OpenDataToFile(string filename)
+	{
+		fout.open(filename, ios::out | ios::app | ios::binary);
+		if (!fout)
+		{
+			cerr << "FILE IS FAIL TO OPEN!" << endl;
+			system("pause");
+		}
+	}
 
 	void openUserOutputFile(string filename) {
 		try {
@@ -20,6 +34,10 @@ public:
 
 	void writeUserDataToFile(User user) {
 		fout.write((char*)&user, sizeof(User));
+	}
+
+	void writeItemsDataToFile(Items items) {
+		fout.write((char*)&items, sizeof(Items));
 	}
 
 	void closeUserOutputFile() {
@@ -36,4 +54,9 @@ public:
 		}
 		return fin;
 	}
+
+	void closeUserInputFile() {
+		fin.close();
+	}
+
 };

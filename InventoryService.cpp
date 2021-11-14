@@ -2,6 +2,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "FileUtil.cpp"
 #include "Items.cpp"
 using namespace std;
 const char ITEMS[] = "Items.dat";
@@ -9,6 +10,7 @@ class InventoryService {
 private:
 	Items items;
 	string name;
+	FileUtil fileUtil;
 public:
 	int choice = 0;
 	int add;
@@ -66,18 +68,12 @@ public:
 	}
 
 	void addItems(Items& items) {
-		ofstream fout;
-		fout.open(ITEMS, ios::out | ios::app | ios::binary);
-		if (!fout) {
-			cerr << "FILE IS FAIL TO OPEN";
-			exit(1);
-		}
-		fout.write((char*)&items, sizeof(Items));
-		fout.close();
+		fileUtil.OpenDataToFile(ITEMS);
+		fileUtil.writeItemsDataToFile(items);
+		fileUtil.closeUserOutputFile();
 	}
 
 	void displayItems() {
-		Items items;
 		ifstream fin;
 		fin.open(ITEMS, ios::in | ios::binary);
 		while (fin.read((char*)&items, sizeof(Items))) {
