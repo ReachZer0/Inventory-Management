@@ -37,14 +37,14 @@ public:
 	double getquantity() const {
 		return quantity;
 	}
-	void setquantity(double quantity) {
+	void setquantity(float quantity) {
 		this->quantity = quantity;
 	}
 
 	double getPrice() const {	
 		return price;
 	}
-	void setPrice(double price) {
+	void setPrice(float price) {
 		this->price = price;
 	}
 

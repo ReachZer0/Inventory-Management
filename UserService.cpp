@@ -53,6 +53,7 @@ public:
 				cout << "Enter username to delete: ";
 				cin >> username;
 				deleteUser(username);
+				system("pause");
 				break;
 			}
 			case 5: {
@@ -128,12 +129,12 @@ public:
 		}
 		fin.close();
 		fout.close();
-		if (remove("user.dat") != 0)
+		if (remove("Users.dat") != 0)
 		{
 			cout << "Failed to remove!" << endl;
 		}
 		rename("temp.dat", "Users.dat");
-		cout << "User has been delete" << endl;
+		cout << "User has been delete." << endl;
 	}
 
 };

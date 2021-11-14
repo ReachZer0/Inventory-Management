@@ -44,8 +44,7 @@ public:
 		cin >> username;
 		cout << "\t\t\t\t\t\tPlease enter your password: ";
 		cin >> password;
-		/*cout << "\t\t\t\t\t\tPlease enter your role: ";
-		cin >> role;*/
+
 		if (role == 1) {
 			memcpy(this->role, "admin", 6);
 		}

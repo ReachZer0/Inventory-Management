@@ -21,6 +21,7 @@ public:
 			if (user.getUsername() == username && user.getPassword() == password) {
 				if (user.getRole() == "admin") {
 					cout << "\t\t\t\t\tLogged in as admin:" << endl;
+					fin.close();
 					usermenu.showAdminMenu();
 					system("pause");
 					break;
@@ -33,6 +34,7 @@ public:
 				if (user.getUsername() == username && user.getPassword() == password) {
 					if (user.getRole() == "user") {
 						cout << "\t\t\t\t\tLogged in as user:" << endl;
+						fin.close();
 						usermenu.showUserMenu();
 						system("pause");
 						break;
@@ -43,7 +45,6 @@ public:
 				}
 			}
 		}
-		fin.close();
 
 	}
 };

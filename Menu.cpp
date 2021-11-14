@@ -57,9 +57,9 @@ public:
 		do {
 			system("cls");
 			cout << "\t\t\t\t\t==========--INVENTORY MANAGEMENT MENU--==========" << endl;
-			cout << "1. Inventory Mangement" << endl;
-			cout << "2. Exit" << endl;
-			cout << "Please select your option (1-2): ";
+			cout << "\t\t\t\t\t1. Inventory Mangement" << endl;
+			cout << "\t\t\t\t\t2. Exit" << endl;
+			cout << "\t\t\t\t\tPlease select your option (1-2): ";
 			cin >> selectchoice;
 
 			switch (selectchoice) {

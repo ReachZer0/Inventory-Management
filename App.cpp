@@ -42,7 +42,7 @@ public:
             case 2:
                 system("cls");
                 cout << "\t\t\t\t\t\t==========---Create New User---==========\n";
-                user.getUser(2);
+                user.getUser(2); //1 for admin, 2 for user
                 userService.addUser(user);
                 break;
 
