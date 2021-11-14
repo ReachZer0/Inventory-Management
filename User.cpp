@@ -35,11 +35,11 @@ public:
 	string getRole() const {
 		return role;
 	}
-	/*void setRole(string role) {
-		this->role = role;
-	}*/
+	//void setRole(string role) {
+	//	this->role = role;
+	//}
 
-	void getUser(int role) { //roel ==1 admin ,role == 2 user
+	void getUser(int role) { //role ==1 admin ,role == 2 user
 		cout << "\t\t\t\t\t\tPlease enter your username: ";
 		cin >> username;
 		cout << "\t\t\t\t\t\tPlease enter your password: ";

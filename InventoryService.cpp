@@ -11,6 +11,7 @@ private:
 	string name;
 public:
 	int choice = 0;
+	int add;
 	bool breakout = false;
 
 	void displayMenu() {
@@ -24,9 +25,17 @@ public:
 
 		switch (choice) {
 		case 1:
-			system("cls");
-			items.getItem();
-			addItems(items);
+			do {
+				system("cls");
+				items.getItem();
+				addItems(items);
+				system("cls");
+				cout << "\t\t\t\t\t\t~1. Add Another Item" << endl;
+				cout << "\t\t\t\t\t\t~0. Exit" << endl;
+				cout << "\t\t\t\t\t\tPlease select your option: ";
+				cin >> add;
+			} while (add != 0);
+
 			break;
 		case 2:
 			system("cls");
