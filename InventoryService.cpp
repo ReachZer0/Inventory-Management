@@ -8,9 +8,9 @@ const char ITEMS[] = "Items.dat";
 class InventoryService {
 private:
 	Items items;
-	int choice = 0;
 	string name;
 public:
+	int choice = 0;
 	bool breakout = false;
 
 	void displayMenu() {
@@ -21,7 +21,6 @@ public:
 		cout << "\t\t\t\t\t\t~0. Exit" << endl;
 		cout << "\t\t\t\t\t\tPlease select your option (1-4): ";
 		cin >> choice;
-		cout << endl;
 
 		switch (choice) {
 		case 1:
@@ -31,6 +30,7 @@ public:
 			break;
 		case 2:
 			system("cls");
+			cout << "\t\t\t\t\t\t---------- DISPLAY INFORMATION ----------\n";
 			displayItems();
 			system("pause");
 			break;
@@ -39,6 +39,7 @@ public:
 			displayItems();
 			cout << "Enter items to update: ";
 			cin >>	name;
+			system("cls");
 			updateItems(name);
 			break;
 		case 4:

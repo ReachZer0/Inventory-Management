@@ -54,10 +54,10 @@ public:
 	}
 
 	void displayUser() {
-		cout << "\t\t\t\t\t\t---------- DISPLAY INFORMATION ----------\n";
 		cout << "\t\t\t\t\t\tName : " << username << endl;
 		cout << "\t\t\t\t\t\tPassword : " << password << endl;
 		cout << "\t\t\t\t\t\tRole : " << role << endl;
+		cout << "\t\t\t\t\t\t----------------------------------------" << endl;
 	}
 
 

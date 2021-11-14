@@ -17,11 +17,11 @@ public:
 	int choice = 0;
 
 	void displayMenu() {
-		cout << "\t\t\t\t\t1. Add User" << endl;
-		cout << "\t\t\t\t\t2. View User" << endl;
-		cout << "\t\t\t\t\t3. Update User" << endl;
-		cout << "\t\t\t\t\t4. Delete User" << endl;
-		cout << "\t\t\t\t\t5. Exit" << endl;
+		cout << "\t\t\t\t\t~1. Add User" << endl;
+		cout << "\t\t\t\t\t~2. View User" << endl;
+		cout << "\t\t\t\t\t~3. Update User" << endl;
+		cout << "\t\t\t\t\t~4. Delete User" << endl;
+		cout << "\t\t\t\t\t~0. Exit" << endl;
 		cout << "\t\t\t\t\tPlease select your option (1-4): ";
 		cin >> choice;
 
@@ -34,6 +34,7 @@ public:
 			}
 			case 2: {
 				system("cls");
+				cout << "\t\t\t\t\t\t---------- DISPLAY INFORMATION ----------\n";
 				viewUser();
 				system("pause");
 				break;
