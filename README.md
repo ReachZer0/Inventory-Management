@@ -1,9 +1,9 @@
 #Inventory Management
-
+ 
 #User Authentication
 #Admin:
 *UserService
--Add User (normal user)
+-Add User (normal user, admin)
 -Update User
 -Display User
 -Delete User

@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
-#include "../Inventory Management/UserService/User.cpp"
-#include "../Inventory Management/UserService/UserService.cpp"
-#include "../Inventory Management/ItemsService/InventoryService.cpp"
-#include "../Inventory Management/Authentication/UserAuthentication.cpp"
+#include "../UserService/User.cpp"
+#include "../UserService/UserService.cpp"
+#include "../ItemsService/InventoryService.cpp"
+#include "../Authentication/USerAuthentication.cpp"
 using namespace std;
 
 class App {

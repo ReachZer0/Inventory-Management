@@ -140,15 +140,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="App.cpp" />
-    <ClCompile Include="FileNotFoundException.cpp" />
-    <ClCompile Include="FileUtil.cpp" />
-    <ClCompile Include="Items.cpp" />
+    <ClCompile Include="App\App.cpp" />
+    <ClCompile Include="App\Menu.cpp" />
+    <ClCompile Include="Authentication\UserAuthentication.cpp" />
+    <ClCompile Include="FileException\FileNotFoundException.cpp" />
+    <ClCompile Include="File\FileUtil.cpp" />
+    <ClCompile Include="ItemsService\InventoryService.cpp" />
+    <ClCompile Include="ItemsService\Items.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="InventoryService.cpp" />
-    <ClCompile Include="User.cpp" />
-    <ClCompile Include="UserAuthentication.cpp" />
-    <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="UserService.cpp" />
+    <ClCompile Include="UserService\User.cpp" />
+    <ClCompile Include="UserService\UserService.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

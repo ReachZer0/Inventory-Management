@@ -5,39 +5,31 @@ using namespace std;
 
 class User {
 private:
-	//string username, password, role;
 	char username[20];
 	char password[20];
 	char role[20];
 
 public:
-	User() :username("Unknown"), password("unknown"), role("unknown") {}
-	//User(string username, string password, string role) :username(username), password(password), role(role) {}
+	User() :username("Unknown"), password("unknown"), role("unknown") {
+	}
 	User(char username[],char password[],char role[])
 	{
 		memcpy(this->username, username, 20);
 		memcpy(this->password, password, 20);
 		memcpy(this->role, role, 20);
 	}
-	//setter and getter
+
 	string getUsername() const {
 		return username;
 	}
-	/*void setUsername(string username) {
-		this->username = username;
-	}*/
+
 	string getPassword() const {
 		return password;
 	}
-	/*void setPassword(string password) {
-		this->password = password;
-	}*/
+
 	string getRole() const {
 		return role;
 	}
-	//void setRole(string role) {
-	//	this->role = role;
-	//}
 
 	void getUser(int role) { //role ==1 admin ,role == 2 user
 		cout << "\t\t\t\t\t\tPlease enter your username: ";

@@ -3,8 +3,8 @@
 #include <fstream>
 #include <vector>
 #include <stdio.h>
-#include "User.cpp"
-#include "FileUtil.cpp"
+#include "../UserService/User.cpp"
+#include "../File/FileUtil.cpp"
 using namespace std;
 const char USER[] = "Users.dat";
 class UserService {

@@ -1,9 +1,9 @@
 #pragma once
 #include <iostream>
 #include <fstream>
-#include "User.cpp"
-#include "InventoryService.cpp"
-#include "UserService.cpp"
+#include "../UserService/User.cpp"
+#include "../ItemsService/InventoryService.cpp"
+#include "../UserService/UserService.cpp"
 using namespace std;
 
 class UserMenu {

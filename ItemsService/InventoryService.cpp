@@ -2,8 +2,8 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include "FileUtil.cpp"
-#include "Items.cpp"
+#include "../File/FileUtil.cpp"
+#include "../ItemsService/Items.cpp"
 using namespace std;
 const char ITEMS[] = "Items.dat";
 class InventoryService {
@@ -69,7 +69,7 @@ public:
 
 	void addItems(Items& items) {
 		fileUtil.OpenDataToFile(ITEMS);
-		fileUtil.writeItemsDataToFile(items);
+		//fileUtil.writeItemsDataToFile(items);
 		fileUtil.closeUserOutputFile();
 	}
 

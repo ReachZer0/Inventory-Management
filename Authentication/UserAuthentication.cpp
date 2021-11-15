@@ -1,8 +1,9 @@
+#pragma once
 #include <iostream>
 #include <fstream>
-#include "User.cpp"
-#include "UserService.cpp"
-#include "Menu.cpp"
+#include "../UserService/User.cpp"
+#include "../UserService/UserService.cpp"
+#include "../App/Menu.cpp"
 using namespace std;
 
 class UserAuth {

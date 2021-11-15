@@ -1,5 +1,6 @@
+#pragma once
 #include <iostream>
-#include "User.cpp"
+#include "../UserService/User.cpp"
 
 using namespace std;
 class FileNotFoundException:public exception {
