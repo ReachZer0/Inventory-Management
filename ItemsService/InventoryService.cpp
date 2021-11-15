@@ -69,7 +69,7 @@ public:
 
 	void addItems(Items& items) {
 		fileUtil.OpenDataToFile(ITEMS);
-		//fileUtil.writeItemsDataToFile(items);
+		fileUtil.writeItemsDataToFile(items);
 		fileUtil.closeUserOutputFile();
 	}
 

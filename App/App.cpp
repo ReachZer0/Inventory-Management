@@ -12,7 +12,7 @@ private:
     void displayMainMenu() {
         cout << "\t\t\t\t\t==========--MANAGEMENT SYSTEM--==========" << endl;
         cout << "\t\t\t\t\t~1. Login" << endl;
-        cout << "\t\t\t\t\t~2. Create New User" << endl;
+        cout << "\t\t\t\t\t~2. Sign up" << endl;
         cout << "\t\t\t\t\t~3. Exit" << endl;
         cout << "\t\t\t\t\t~Please select your option (1-3):";
         cin >> choice;

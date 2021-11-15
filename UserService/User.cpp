@@ -46,10 +46,9 @@ public:
 	}
 
 	void displayUser() {
-		cout << "\t\t\t\t\t\tName : " << username << endl;
-		cout << "\t\t\t\t\t\tPassword : " << password << endl;
-		cout << "\t\t\t\t\t\tRole : " << role << endl;
-		cout << "\t\t\t\t\t\t----------------------------------------" << endl;
+		cout << "\t\t\t\t\tName : " << username << " \t";
+		cout << "Password : " << password << " ";
+		cout << "Role : " << role << "\n\n";
 	}
 
 

@@ -60,10 +60,10 @@ public:
 	}
 
 	void displayItems() {
-		cout << "\t\t\t\t\t\tItem : " << name << endl;
-		cout << "\t\t\t\t\t\tBrand/Manufactor : " << brand << endl;
-		cout << "\t\t\t\t\t\tQuantity: " << quantity << endl;
-		cout << "\t\t\t\t\t\tPrice: " << price << endl;
-		cout << "\t\t\t\t\t\t----------------------------------------" << endl;
+		cout << "\t\t\tItem : " << name << " \t";
+		cout << "Brand/Manufactor : " << brand << " \t";
+		cout << "Quantity: " << quantity << " ";
+		cout << "Price: " << price << "$"<<endl;
+
 	}
 };
