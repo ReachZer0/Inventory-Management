@@ -139,7 +139,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="App.cpp" />
     <ClCompile Include="App\App.cpp" />
     <ClCompile Include="App\Menu.cpp" />
     <ClCompile Include="Authentication\UserAuthentication.cpp" />

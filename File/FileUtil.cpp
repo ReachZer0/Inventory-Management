@@ -3,7 +3,7 @@
 #include <fstream>
 #include "../FileException/FileNotFoundException.cpp"
 #include "../UserService/User.cpp"
-#include "../ItemsService/InventoryService.cpp"
+#include "../ItemsService/Items.cpp"
 using namespace std;
 class FileUtil {
 private:
