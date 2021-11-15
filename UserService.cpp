@@ -15,6 +15,7 @@ private:
 public:
 	bool breakout = false;
 	int choice = 0;
+	int newuser = 0;
 
 	void displayMenu() {
 		cout << "\t\t\t\t\t~1. Add User" << endl;
@@ -28,7 +29,18 @@ public:
 		switch (choice) {
 			case 1: {
 				system("cls");
-				user.getUser(2);
+				cout << "\t\t\t\t\t~1. Add New Admin" << endl;
+				cout << "\t\t\t\t\t~2. Add New User" << endl;
+				cout << "\t\t\t\t\tPlease enter your choice: ";
+				cin >> newuser;
+				if (newuser == 1) {
+					system("cls");
+					user.getUser(1); //create admin
+				}
+				else if (newuser == 2 ){
+					system("cls");
+					user.getUser(2); //create user
+				}
 				addUser(user);
 				break;
 			}
