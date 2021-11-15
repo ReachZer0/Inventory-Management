@@ -3,14 +3,14 @@
 #include <fstream>
 #include "../FileException/FileNotFoundException.cpp"
 #include "../UserService/User.cpp"
-//#include "../ItemsService/InventoryService.cpp"
+#include "../ItemsService/InventoryService.cpp"
 using namespace std;
 class FileUtil {
 private:
 	ofstream fout;
 	ifstream fin;
 	User user;
-	//Items items;
+	Items items;
 public:
 
 	void OpenDataToFile(string filename)
@@ -36,9 +36,9 @@ public:
 		fout.write((char*)&user, sizeof(User));
 	}
 
-	/*void writeItemsDataToFile(Items items) {
+	void writeItemsDataToFile(Items items) {
 		fout.write((char*)&items, sizeof(Items));
-	}*/
+	}
 
 	void closeUserOutputFile() {
 		fout.close();
