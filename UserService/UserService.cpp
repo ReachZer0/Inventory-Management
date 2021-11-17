@@ -22,7 +22,7 @@ public:
 		cout << "\t\t\t\t\t~2. View User" << endl;
 		cout << "\t\t\t\t\t~3. Update User" << endl;
 		cout << "\t\t\t\t\t~4. Delete User" << endl;
-		cout << "\t\t\t\t\t~0. Exit" << endl;
+		cout << "\t\t\t\t\t~0. Return" << endl;
 		cout << "\t\t\t\t\tPlease select your option (1-4): ";
 		cin >> choice;
 

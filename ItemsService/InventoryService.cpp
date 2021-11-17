@@ -21,7 +21,7 @@ public:
 		cout << "\t\t\t\t\t\t~2. Display All Items" << endl;
 		cout << "\t\t\t\t\t\t~3. Update Items" << endl;
 		cout << "\t\t\t\t\t\t~4. Remove Items" << endl;
-		cout << "\t\t\t\t\t\t~0. Exit" << endl;
+		cout << "\t\t\t\t\t\t~0. Return" << endl;
 		cout << "\t\t\t\t\t\tPlease select your option (1-4): ";
 		cin >> choice;
 
@@ -33,7 +33,7 @@ public:
 				addItems(items);
 				system("cls");
 				cout << "\t\t\t\t\t\t~1. Add Another Item" << endl;
-				cout << "\t\t\t\t\t\t~0. Exit" << endl;
+				cout << "\t\t\t\t\t\t~0. Back" << endl;
 				cout << "\t\t\t\t\t\tPlease select your option: ";
 				cin >> add;
 			} while (add != 0);
